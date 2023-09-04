@@ -8,7 +8,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root #设置root帐号密码
     ports:
-      - 3306:3306
+      - 23306:3306
     volumes:
       - /mydata/mysql/data:/var/lib/mysql #数据文件目录挂载
       - /mydata/mysql/conf:/etc/mysql #配置文件目录挂载
