@@ -8,7 +8,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root #设置root帐号密码
     ports:
-      - 23306:3306
+      - 3306:3306
     volumes:
       - /mydata/mysql/data:/var/lib/mysql #数据文件目录挂载
       - /mydata/mysql/conf:/etc/mysql #配置文件目录挂载
@@ -25,7 +25,7 @@ services:
     image: nginx:1.22
     container_name: nginx
     volumes:
-      - /mydata/nginx/conf:/etc/nginx #配置文件目录挂载
+#      - /mydata/nginx/conf:/etc/nginx #配置文件目录挂载
       - /mydata/nginx/html:/usr/share/nginx/html #静态资源根目录挂载
       - /mydata/nginx/logs:/var/log/nginx #日志文件目录挂载
     ports:
